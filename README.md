@@ -1,39 +1,48 @@
-# Acortador de Enlaces + QR
+# Acortador de Enlaces & Generador de Códigos QR
 
-## Descripción
-Acorta enlaces y genera códigos QR de forma instantánea, con un diseño profesional y moderno.
+## Descripción General
+Una solución robusta y eficiente para acortar URLs y generar códigos QR de manera instantánea. Diseñado para ofrecer una experiencia moderna, segura y escalable, ideal para entornos de producción y proyectos empresariales.
 
 ---
 
-## Despliegue en Producción
+## Implementación en Producción
 
-### 1. Instala las dependencias
+### 1. Instalación de Dependencias
 ```bash
 pip install -r requirements.txt
 ```
 
-### 2. Ejecuta con Gunicorn (servidor WSGI recomendado)
+### 2. Ejecución del Servicio (WSGI)
+Se recomienda utilizar Gunicorn para entornos productivos:
 ```bash
 gunicorn -w 4 -b 0.0.0.0:8000 app:app
 ```
-- `-w 4` = 4 workers (ajusta según tu CPU)
-- `-b 0.0.0.0:8000` = escucha en todas las interfaces, puerto 8000
+- `-w 4`: Número de workers (ajustable según recursos disponibles)
+- `-b 0.0.0.0:8000`: Escucha en todas las interfaces, puerto 8000
 
-### 3. (Opcional) Usa Nginx como proxy inverso
-- Redirige el tráfico HTTPS/HTTP a Gunicorn para mayor seguridad y rendimiento.
+### 3. Integración con Proxy Inverso (Nginx)
+Para máxima seguridad y rendimiento, se recomienda desplegar detrás de Nginx como proxy inverso, gestionando certificados SSL y balanceo de carga.
 
-### 4. Seguridad y buenas prácticas
-- Usa HTTPS en producción.
-- Cambia `debug=True` a `debug=False` en `app.py`.
-- Considera usar una base de datos para persistencia real.
-- Limita el tamaño de los formularios y valida URLs.
-
----
-
-## Variables de entorno
-- Puedes usar variables de entorno para configurar el host, puerto, y modo debug.
+### 4. Recomendaciones de Seguridad
+- Habilitar HTTPS en todos los entornos productivos.
+- Configurar `debug=False` en `app.py`.
+- Implementar una base de datos para persistencia avanzada.
+- Validar y limitar el tamaño de los formularios y URLs.
+- Utilizar variables de entorno para la configuración sensible.
 
 ---
 
-## Créditos
-- Hecho con Flask, qrcode y Pillow. 
+## Configuración mediante Variables de Entorno
+- Personaliza host, puerto y modo debug utilizando variables de entorno estándar.
+
+---
+
+## Tecnologías Utilizadas
+- [Flask](https://flask.palletsprojects.com/)
+- [qrcode](https://pypi.org/project/qrcode/)
+- [Pillow](https://python-pillow.org/)
+
+---
+
+## Autoría
+Desarrollado por Oscar. Para soporte empresarial o personalización, contactar vía email. 

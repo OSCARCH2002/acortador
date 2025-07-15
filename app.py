@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 url_map = {}
 
-# Generar un código corto aleatorio
+# Genera el codigo corto aleatorio
 def generate_short_code(length=6):
     chars = string.ascii_letters + string.digits
     while True:
@@ -22,7 +22,6 @@ def index():
         original_url = request.form['url']
         code = generate_short_code()
         url_map[code] = original_url
-        # Redirige usando PRG
         return redirect(url_for('index', code=code))
     # GET: muestra solo si hay code en query string
     code = request.args.get('code')

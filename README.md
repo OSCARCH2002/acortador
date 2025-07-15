@@ -21,5 +21,3 @@ pip install -r requirements.txt
 
 ---
 
-## Autoría
-Desarrollado por Oscar. Para soporte empresarial o personalización, contactar vía email. 

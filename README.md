@@ -1,7 +1,7 @@
 # Acortador de Enlaces & Generador de Códigos QR
 
-## Descripción General
-Una solución robusta y eficiente para acortar URLs y generar códigos QR de manera instantánea. Diseñado para ofrecer una experiencia moderna, segura y escalable, ideal para entornos de producción y proyectos empresariales.
+## ¿Qué es este proyecto?
+Este proyecto te permite acortar enlaces y crear códigos QR de forma rápida y sencilla. Es ideal para quienes buscan una herramienta práctica, moderna y fácil de usar, tanto para uso personal como profesional.
 
 ---
 
@@ -11,11 +11,6 @@ Una solución robusta y eficiente para acortar URLs y generar códigos QR de man
 ```bash
 pip install -r requirements.txt
 ```
-
----
-
-## Configuración mediante Variables de Entorno
-- Personaliza host, puerto y modo debug utilizando variables de entorno estándar.
 
 ---
 
